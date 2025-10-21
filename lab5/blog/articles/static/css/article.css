@@ -1,0 +1,216 @@
+/* Общие стили для всех страниц */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+}
+
+.header img {
+    display: block; 
+    width: 318px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.header-content img {
+    display: block;
+    width: 318px;
+    margin: 0;
+}
+
+.header-content .back-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header-content .back-link:hover {
+    background-color: #ffffff;
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+/* Стили для страницы архива (archive.html) */
+.archive {
+    width: 960px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archive .post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.archive .post-title a:hover {
+    text-decoration: underline;
+}
+
+.archive .article-author { 
+    width: 50%; 
+    float: left;
+}
+
+.archive .article-created-date { 
+    text-align: right;
+}
+
+.archive .one-post {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Стили для страницы отдельной статьи (article.html) */
+.article {
+    width: 960px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article .article-detail {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.article .article-title {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+.article .article-meta {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.article .article-author { 
+    width: 50%; 
+    float: left;
+}
+
+.article .article-created-date { 
+    text-align: right;
+}
+
+.article .article-content {
+    line-height: 1.6;
+    margin: 25px 0;
+    font-size: 16px;
+}
+
+.article .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Стили для страницы создания поста (create_post.html) */
+.create-post {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+}
+
+.create-post .content {
+    width: 960px; 
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.create-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.create-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.create-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-form input[type="text"],
+.create-form textarea {
+    padding: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.create-form input[type="text"]::placeholder,
+.create-form textarea::placeholder {
+    color: #cccccc;
+}
+
+.create-form input[type="text"]:focus,
+.create-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.create-form textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.create-form input[type="submit"] {
+    padding: 15px 30px;
+    background: #ffffff;
+    color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-form input[type="submit"]:hover {
+    background: #3498db;
+    color: #ffffff;
+}
+
+.create-form .error {
+    background: #e74c3c;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
