@@ -1,0 +1,152 @@
+/* Общие стили для страниц аутентификации */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-container {
+    width: 960px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0;
+}
+
+.auth-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 28px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 15px;
+}
+
+/* Стили для форм */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.form-control::placeholder {
+    color: #cccccc;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для кнопок */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #ffffff;
+    color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.btn:hover {
+    background: #3498db;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background: #ffffff;
+    color: #1abc9c;
+}
+
+.btn-primary:hover {
+    background: #3498db;
+    color: #ffffff;
+}
+
+/* Стили для сообщений */
+.alert {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: rgba(46, 204, 113, 0.8);
+    color: #ffffff;
+    border: 1px solid #27ae60;
+}
+
+.alert-error {
+    background: rgba(231, 76, 60, 0.8);
+    color: #ffffff;
+    border: 1px solid #c0392b;
+}
+
+/* Стили для ссылок */
+.auth-links {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-links p {
+    margin: 15px 0;
+}
+
+.auth-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 30px;
+}

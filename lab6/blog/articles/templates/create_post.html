@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Public Blog - создать статью</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="create-post">
+    <div class="header">
+        <div class="header-content">
+            <img src="{% static 'img/logo_v2.png' %}" alt="собеседование">
+            <!-- <a href="{% url 'archive' %}" class="back-link">Все статьи</a> -->
+            <div class="auth-links">
+                {% if user.is_authenticated %}
+                    <span class="user-greeting">Привет, {{ user.username }}!</span>
+                    <a href="{% url 'archive' %}" class="back-link">Все статьи</a>
+                    <a href="{% url 'auth_app:logout' %}" class="back-link">Выйти</a>
+                {% else %}
+                    <a href="{% url 'auth_app:login' %}" class="back-link">Войти</a>
+                    <a href="{% url 'auth_app:register' %}" class="back-link">Регистрация</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="create-form">
+            <h1>Написать статью</h1>
+            <form method="POST">{% csrf_token %}
+                <input type="text" name="title" placeholder="Название статьи" value="{{ form.title }}">
+                <textarea name="text" placeholder="Текст статьи">{{ form.text }}</textarea>
+                <input type="submit" value="Сохранить">
+            </form>
+            {% if form.errors %}
+                <div class="error">{{ form.errors }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

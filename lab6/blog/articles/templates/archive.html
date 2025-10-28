@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив статей</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="archive">
+    <div class="header">
+        <div class="header-content">
+            <img src="{% static 'img/logo_v2.png' %}" alt="собеседование">
+            <!-- {% if not request.user.is_anonymous %}
+                <a href="{% url 'create_post' %}" class="back-link">Написать статью</a> 
+            {% endif %} -->
+            <div class="auth-links">
+                {% if user.is_authenticated %}
+                    <span class="user-greeting">Привет, {{ user.username }}!</span>
+                    <a href="{% url 'create_post' %}" class="back-link">Написать статью</a>
+                    <a href="{% url 'auth_app:logout' %}" class="back-link">Выйти</a>
+                {% else %}
+                    <a href="{% url 'auth_app:login' %}" class="back-link">Войти</a>
+                    <a href="{% url 'auth_app:register' %}" class="back-link">Регистрация</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="archive">
+        {% for post in posts %}
+            <div class="one-post">
+                <h2 class="post-title">
+                    <a href="{% url 'get_article' article_id=post.id %}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
